@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif; 
+}
+
+.title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: red;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.form-control{
+  margin: 10px;
+ 
+}
+
+.form-control input {
+  width: 200%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+  border-radius: 10px;
+  position: relative;
+  right: 130px;
+}
+
+.btn {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 153, 0);
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+  max-height: 40px;;
+}
+
+.btn.register {
+  background-color:rgb(112, 158, 177)
+}
+
+.product {
+  background: rgb(241, 239, 239);
+  margin: 5px;
+  padding: 10px 20px;
+  width: 800px;
+  height:150px;
+  
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  
+
+  }
+
+.products {
+  margin-top: 50px;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.image {
+  object-fit: cover;
+  width:120px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.userLogin {
+  
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.signin-form {
+  display: flex;
+  justify-content: center;
+  margin:20px;
+  
+}
+
+p {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.signin-form input {
+  height: 40px;
+  width: 290px;
+  margin: 20px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.submit {
+  background-color: rgba(255, 153, 0);
+  cursor: pointer;
+}
+
+.fawrench {
+  color: blue;
+}
+
+.fatimes {
+  color: red;
+}
