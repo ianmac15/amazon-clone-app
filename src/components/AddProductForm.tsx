@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { AddProductType, newProductType } from './Products'
 
 const AddProductForm = ({addProduct}:properties) => {
@@ -10,7 +10,10 @@ const AddProductForm = ({addProduct}:properties) => {
         }
     )
 
-    const onAdd = () => {
+    const onAdd = (e: React.FormEvent<HTMLFormElement>) => {
+        
+        e.preventDefault()
+
         if (!newProduct.name) {
             alert("Give a valid name")
             return
@@ -26,13 +29,13 @@ const AddProductForm = ({addProduct}:properties) => {
     }
 
     return (
-        <form onSubmit={onAdd} >
-            <label>Add Product</label>
+        <form className='signin-form' onSubmit={onAdd} >
+            <label className='small-titles'>New Product</label>
             <input value={newProduct.name} type="text" placeholder='Name'
                 onChange={(e) => setNewProduct({ ...newProduct, name: e.target.value })}></input>
             <input value={newProduct.image} type="text" placeholder='Image'
                 onChange={(e) => setNewProduct({ ...newProduct, image: e.target.value })}></input>
-            <button type='submit'>Add</button>
+            <button className='btn' type='submit'>Add</button>
         </form>
     )
 }

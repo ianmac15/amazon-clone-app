@@ -1,8 +1,8 @@
 import Title from "./components/Title"
 import Products from "./components/Products"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import UserLogin from "./components/UserLogin"
-import Register from "./components/Register"
+import HomePage from "./components/HomePage"
 
 
 const App = () => {
@@ -10,16 +10,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={
-          <div>
-            <Title name="Online Shop" />
-            <div className="products">
-              <Products/>
-            </div>
-          </div>
-        } />
+        <Route path="/" element={<HomePage/>} />
         <Route path="/signIn" element={<UserLogin />} />
-        <Route path="/register" element={<Register onAdd={addUser} />} />
       </Routes>
     </Router>
   )

@@ -127,3 +127,8 @@ p {
 .fatimes {
   color: red;
 }
+
+.small-titles {
+ font-size: 25px;
+ font-weight: bold;
+}

@@ -1,45 +1,41 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
-import { newUserType, onAddInterface, userType } from "../App"
+import { newUserType, onAddInterface} from "./UserLogin"
 
-const Register = ({ onAdd }: properties) => {
-    const [newEmail, setEmail] = useState('')
-    const [newUsername, setUsername] = useState('')
-    const [newPassword, setPassword] = useState('')
+const Register = ({ onAdd, goBack }: properties) => {
+    const [newUser, setNewUser] = useState<newUserType>(
+        {
+            email:'',
+            username:'',
+            password:''
+        })
 
 
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
-        if (!newEmail) {
-            alert('Please add an email')
-            return
-        }
-        if (!newUsername) {
+        if(!newUser.email) {
             alert('Please add an email')
             return
         }
 
-        if (!newPassword) {
+        if(!newUser.username) {
             alert('Please add an email')
             return
         }
 
-        setEmail(newEmail)
-        setUsername(newUsername)
-        setPassword(newPassword)
-
-        const newUser: newUserType = {
-            email: newEmail,
-            username: newUsername,
-            password: newPassword
+        if(!newUser.password) {
+            alert('Please add an email')
+            return
         }
 
         onAdd(newUser)
 
-        setEmail('')
-        setUsername('')
-        setPassword('')
+        setNewUser({
+            email:'',
+            username:'',
+            password:''
+        })
     }
 
     return (
@@ -50,17 +46,17 @@ const Register = ({ onAdd }: properties) => {
 
                 <form onSubmit={onSubmit}>
                     <p>Enter email</p>
-                    <input type='text' value={newEmail} placeholder='Example: user@gmail.com'
-                        onChange={(e) => setEmail(e.target.value)} />
+                    <input type='text' value={newUser.email} placeholder='Example: user@gmail.com'
+                        onChange={(e) => setNewUser({...newUser, email: e.target.value})} />
                     <p>Enter username</p>
-                    <input type='text' value={newUsername} placeholder='Example: jonh.doe'
-                        onChange={(e) => setUsername(e.target.value)} />
+                    <input type='text' value={newUser.username} placeholder='Example: jonh.doe'
+                        onChange={(e) => setNewUser({...newUser, username: e.target.value})} />
                     <p>Enter password</p>
-                    <input type='text' value={newPassword}
-                        onChange={(e) => setPassword(e.target.value)} />
+                    <input type='text' value={newUser.password}
+                        onChange={(e) => setNewUser({...newUser, password: e.target.value})} />
                     <input className='submit' type='submit' value='Continue' />
                 </form>
-                <Link className='btn' to='/signIn'>Back</Link>
+                <button className='btn' onClick={() => goBack()}>Back</button>
             </div>
         </div>
     )
@@ -68,6 +64,11 @@ const Register = ({ onAdd }: properties) => {
 
 interface properties {
     onAdd: onAddInterface
+    goBack: goBackType
+}
+
+type goBackType = {
+    (param:void):void
 }
 
 export default Register
