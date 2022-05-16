@@ -12,9 +12,8 @@ import { useEffect } from "react"
 const App = () => {
   // const [isUserLoggedIn, setIsUserloggedIn] = useState<boolean>(false)
   const [users, setUsers] = useState<userType[]>([])
+  const [currentUser, setCurrentUser] = useState<userType>({email:'', username:'', password:'', id:0})
   
-
-
   useEffect(
     () => {
 
@@ -96,9 +95,9 @@ const editUser = async (id: number, updEmail: string, updUsername: string, updPa
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage/>} />
-        <Route path="/signIn" element={<UserLogin newUser={newUser}/>} />
-        <Route path="/register" element={<Register onAdd = {onAdd}/>} />
+        <Route path="/" element={<HomePage currentUser={currentUser}/>} />
+        <Route path="/signIn" element={<UserLogin users={users} passUser={setCurrentUser}/>} />
+        <Route path="/register" element={<Register onAdd = {addUser}/>} />
       </Routes>
     </Router>
   )

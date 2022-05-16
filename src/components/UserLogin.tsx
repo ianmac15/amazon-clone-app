@@ -5,23 +5,29 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Register from './Register'
 import { setHasLoggedInType } from '../App'
 
-const UserLogin = ({setHasLoggedIn, users}:properties) => {
+const UserLogin = ({passUser, users}:properties) => {
 
     const [userToCheck, setUserToCheck] = useState<newUserType>({
         email:'', username:'', password:''})
     // const [isRegisterPanelOpen, setIsRegisterPanelOpen] = useState<boolean>(false)
-
+        const [userFound, setUserFound] = useState<userType>({
+            email:'', username:'', password:'', id:0
+        })
     
 
     const checkUser = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         for (let i = 0; i < users.length; i++) {
-            if (userToCheck.username == users[i].username) {
-                setHasLoggedIn(true)
+            if (userToCheck.username == users[i].username && userToCheck.password == users[i].password) {
+                setUserFound(users[i])
+                passUser(userFound)
                 return
             }
+            setUserFound({email:'',username:'',password:'', id:0})
+            alert("Wrong username or password")
         }
+
     }
 
     // const openRegisterPanel = () => {
@@ -56,6 +62,10 @@ export interface userType {
 
 }
 
+type passUserType = {
+    (param:userType):void
+}
+
 export interface onAddInterface {
     (param: newUserType): void
 }
@@ -67,7 +77,7 @@ export interface newUserType {
 }
 
 type properties = {
-    setHasLoggedIn: setHasLoggedInType
+    passUser: passUserType
     users: userType[]
 }
 
