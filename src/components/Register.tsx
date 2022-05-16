@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 import { newUserType, onAddInterface} from "./UserLogin"
 
-const Register = ({ onAdd, goBack }: properties) => {
+const Register = ({ onAdd }: properties) => {
     const [newUser, setNewUser] = useState<newUserType>(
         {
             email:'',
@@ -56,7 +56,7 @@ const Register = ({ onAdd, goBack }: properties) => {
                         onChange={(e) => setNewUser({...newUser, password: e.target.value})} />
                     <input className='submit' type='submit' value='Continue' />
                 </form>
-                <button className='btn' onClick={() => goBack()}>Back</button>
+                <Link className='btn' to={'/signIn'} >Back</Link>
             </div>
         </div>
     )
@@ -64,7 +64,6 @@ const Register = ({ onAdd, goBack }: properties) => {
 
 interface properties {
     onAdd: onAddInterface
-    goBack: goBackType
 }
 
 type goBackType = {
