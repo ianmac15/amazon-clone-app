@@ -17,6 +17,12 @@
   justify-content: space-between;
 }
 
+.webpage-name {
+  margin: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: rgb(19, 26, 34);
+}
 
 .form-control{
   margin: 10px;

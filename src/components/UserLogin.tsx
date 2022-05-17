@@ -40,7 +40,7 @@ const UserLogin = ({passUser, users}:properties) => {
                            value={userToCheck.username} onChange={(e) => setUserToCheck({...userToCheck,username:e.target.value})} />
                         <input type='text' placeholder='password' value={userToCheck.password}
                             onChange={(e) => setUserToCheck({...userToCheck,password:e.target.value})} />
-                        <input className='submit' type='submit' value='Continue' />
+                        <button className='btn' type='submit'>Continue</button>
                     </form>
                     <Link className='btn' to='/'>Back</Link>
 

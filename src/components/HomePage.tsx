@@ -1,13 +1,14 @@
 import Title from "./Title"
 import Products from "./Products"
 import { userType } from "./UserLogin"
+import { signOutType } from "../App"
 
-const HomePage = ({currentUser}:properties) => {
+const HomePage = ({currentUser, signOut}:properties) => {
 
     
     return (
         <div>
-            <Title name="Online Shop" currentUser={currentUser}/>
+            <Title name="Online Shop" currentUser={currentUser} signOut={signOut}/>
             <div className="products">
                 <Products />
             </div>
@@ -17,6 +18,7 @@ const HomePage = ({currentUser}:properties) => {
 
 type properties = {
     currentUser: userType
+    signOut: signOutType
 }
 
 export default HomePage

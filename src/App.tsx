@@ -90,10 +90,14 @@ const editUser = async (id: number, updEmail: string, updUsername: string, updPa
 
 }
 
+const signOut = () => {
+    setCurrentUser({email:'', username:'', password:'', id:0})
+}
+
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage currentUser={currentUser}/>} />
+        <Route path="/" element={<HomePage currentUser={currentUser} signOut={signOut} />} />
         <Route path="/signIn" element={<UserLogin users={users} passUser={setCurrentUser}/>} />
         <Route path="/register" element={<Register onAdd = {addUser}/>} />
       </Routes>
@@ -104,6 +108,10 @@ const editUser = async (id: number, updEmail: string, updUsername: string, updPa
 
 export type setHasLoggedInType = {
   (param: boolean):void
+}
+
+export type signOutType = {
+    (param: void):void
 }
 
 
