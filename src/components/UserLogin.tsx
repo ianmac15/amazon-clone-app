@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Register from './Register'
-import { setHasLoggedInType } from '../App'
 
 const UserLogin = ({passUser, users}:properties) => {
 
@@ -19,7 +15,7 @@ const UserLogin = ({passUser, users}:properties) => {
         e.preventDefault()
 
         for (let i = 0; i < users.length; i++) {
-            if (userToCheck.username == users[i].username && userToCheck.password == users[i].password) {
+            if (userToCheck.username === users[i].username && userToCheck.password === users[i].password) {
                 setUserFound(users[i])
                 passUser(userFound)
                 return

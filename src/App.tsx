@@ -1,6 +1,4 @@
-import Title from "./components/Title"
-import Products, { AddProductType } from "./components/Products"
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import UserLogin, { userType } from "./components/UserLogin"
 import HomePage from "./components/HomePage"
 import { useState } from "react"
@@ -54,7 +52,7 @@ const addUser = async (newUser: newUserType) => {
 }
 
 const deleteUser = async (id: number) => {
-    const res = await fetch(`http://localhost:7000/users/${id}`,
+    await fetch(`http://localhost:7000/users/${id}`,
         {
             method: 'DELETE'
         }

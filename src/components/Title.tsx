@@ -1,4 +1,3 @@
-import Button from "./Button"
 import { Link } from "react-router-dom"
 import { userType } from "./UserLogin"
 
@@ -9,7 +8,7 @@ const Title = ({name, currentUser}:properties) => {
             <form className='form-control'>
                 <input/>
             </form>
-            {currentUser ? (<h1>{currentUser.username}</h1>) : (<Link className="btn" to={"/signIn"}>Sign In</Link>)}
+            {currentUser.id !== 0 ? (<div className="user"><h3 style={{fontSize:30}}>{currentUser.username}</h3><button className="btn">Sign out</button></div>) : (<Link className="btn" to={"/signIn"}>Sign In</Link>)}
             
         </h1>
     )

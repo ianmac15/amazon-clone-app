@@ -66,8 +66,4 @@ interface properties {
     onAdd: onAddInterface
 }
 
-type goBackType = {
-    (param:void):void
-}
-
 export default Register

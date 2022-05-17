@@ -73,7 +73,7 @@ const Products = () => {
         const data: productType = await res.json()
 
         setProducts(products.map((par) => 
-            (par.id == id ? {...par, name:data.name, image:data.image} : par)
+            (par.id === id ? {...par, name:data.name, image:data.image} : par)
     
 
         ))

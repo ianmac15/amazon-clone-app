@@ -10,8 +10,8 @@
 
 .title {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: red;
-  background-color: black;
+  color: white;
+  background-color: rgb(19, 26, 34);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -131,4 +131,10 @@ p {
 .small-titles {
  font-size: 25px;
  font-weight: bold;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
