@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const UserLogin = ({passUser, users}:properties) => {
+const UserLogin = ({ passUser, users }: properties) => {
 
     const [userToCheck, setUserToCheck] = useState<newUserType>({
-        email:'', username:'', password:''})
+        email: '', username: '', password: ''
+    })
     // const [isRegisterPanelOpen, setIsRegisterPanelOpen] = useState<boolean>(false)
-        const [userFound, setUserFound] = useState<userType>({
-            email:'', username:'', password:'', id:0
-        })
-    
+    const [userFound, setUserFound] = useState<userType>({
+        email: '', username: '', password: '', id: 0
+    })
+    const [myRoute, setMyRoute] = useState<string>('/signIn')
+
 
     const checkUser = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -18,9 +20,10 @@ const UserLogin = ({passUser, users}:properties) => {
             if (userToCheck.username === users[i].username && userToCheck.password === users[i].password) {
                 setUserFound(users[i])
                 passUser(userFound)
+                setMyRoute('/')
                 return
             }
-            setUserFound({email:'',username:'',password:'', id:0})
+            setUserFound({ email: '', username: '', password: '', id: 0 })
             alert("Wrong username or password")
         }
 
@@ -31,22 +34,22 @@ const UserLogin = ({passUser, users}:properties) => {
     // }
 
     return (
-            <div className='signin-form'>
-                <div className='userLogin'>
-                    <h1>Sign In</h1>
-                    <p>Enter username</p>
-                    <form onSubmit={checkUser}>
-                        <input type='text' placeholder='Example user@gmail.com'
-                           value={userToCheck.username} onChange={(e) => setUserToCheck({...userToCheck,username:e.target.value})} />
-                        <input type='text' placeholder='password' value={userToCheck.password}
-                            onChange={(e) => setUserToCheck({...userToCheck,password:e.target.value})} />
-                        <button className='btn' type='submit'>Continue</button>
-                    </form>
-                    <Link className='btn' to='/'>Back</Link>
+        <div className='signin-form'>
+            <div className='userLogin'>
+                <h1>Sign In</h1>
+                <p>Enter username</p>
+                <form onSubmit={checkUser}>
+                    <input type='text' placeholder='Example user@gmail.com'
+                        value={userToCheck.username} onChange={(e) => setUserToCheck({ ...userToCheck, username: e.target.value })} />
+                    <input type='text' placeholder='password' value={userToCheck.password}
+                        onChange={(e) => setUserToCheck({ ...userToCheck, password: e.target.value })} />
+                    <Link className='btn' to={myRoute} type='submit'>Continue</Link>
+                </form>
+                <Link className='btn' to='/'>Back</Link>
 
-                </div>
-                <Link className="btn register" to={'/register'}>Create your account</Link>
             </div>
+            <Link className="btn register" to={'/register'}>Create your account</Link>
+        </div>
     )
 }
 
@@ -59,7 +62,7 @@ export interface userType {
 }
 
 type passUserType = {
-    (param:userType):void
+    (param: userType): void
 }
 
 export interface onAddInterface {
