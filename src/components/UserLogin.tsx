@@ -11,6 +11,7 @@ const UserLogin = ({ passUser, users }: properties) => {
         email: '', username: '', password: '', id: 0
     })
     const [myRoute, setMyRoute] = useState<string>('/signIn')
+    const [hasLoggedIn, setHasLoggedIn] = useState<boolean>(false)
 
 
     const checkUser = (e: React.FormEvent<HTMLFormElement>) => {
@@ -21,10 +22,12 @@ const UserLogin = ({ passUser, users }: properties) => {
                 setUserFound(users[i])
                 passUser(userFound)
                 setMyRoute('/')
+
                 return
             }
-            setUserFound({ email: '', username: '', password: '', id: 0 })
+            
             alert("Wrong username or password")
+            setUserFound({ email: '', username: '', password: '', id: 0 })
         }
 
     }
@@ -43,7 +46,8 @@ const UserLogin = ({ passUser, users }: properties) => {
                         value={userToCheck.username} onChange={(e) => setUserToCheck({ ...userToCheck, username: e.target.value })} />
                     <input type='text' placeholder='password' value={userToCheck.password}
                         onChange={(e) => setUserToCheck({ ...userToCheck, password: e.target.value })} />
-                    <Link className='btn' to={myRoute} type='submit'>Continue</Link>
+                    <button className='btn' type='submit'>Sign in</button>    
+                    {hasLoggedIn ? <Link className='btn' to={myRoute} >Continue</Link> : null}
                 </form>
                 <Link className='btn' to='/'>Back</Link>
 
