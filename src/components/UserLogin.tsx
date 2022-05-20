@@ -8,10 +8,6 @@ const UserLogin = ({ passUser, users }: properties) => {
         email: '', username: '', password: ''
     })
 
-    const [userFound, setUserFound] = useState<userType>({
-        email: '', username: '', password: '', id: 0
-    })
-
     const [hasLoggedIn, setHasLoggedIn] = useState<boolean>(false)
     const navigate = useNavigate()
 
@@ -21,15 +17,14 @@ const UserLogin = ({ passUser, users }: properties) => {
 
         for (let i = 0; i < users.length; i++) {
             if (userToCheck.username === users[i].username && userToCheck.password === users[i].password) {
-                setUserFound(users[i])
-                passUser(userFound)
+                passUser(users[i])
                 navigate('/')
                 return
             }
         }
 
         alert("Wrong username or password")
-        setUserFound({ email: '', username: '', password: '', id: 0 })
+        
 
     }
 
