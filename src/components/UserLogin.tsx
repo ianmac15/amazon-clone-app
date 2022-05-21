@@ -8,7 +8,6 @@ const UserLogin = ({ passUser, users }: properties) => {
         email: '', username: '', password: ''
     })
 
-    const [hasLoggedIn, setHasLoggedIn] = useState<boolean>(false)
     const navigate = useNavigate()
 
 
@@ -34,7 +33,7 @@ const UserLogin = ({ passUser, users }: properties) => {
                 <h1>Sign In</h1>
                 <p>Enter username</p>
                 <form onSubmit={checkUser}>
-                    <input type='text' placeholder='Example user@gmail.com'
+                    <input type='text' placeholder='username'
                         value={userToCheck.username} onChange={(e) => setUserToCheck({ ...userToCheck, username: e.target.value })} />
                     <input type='password' placeholder='password' value={userToCheck.password}
                         onChange={(e) => setUserToCheck({ ...userToCheck, password: e.target.value })} />

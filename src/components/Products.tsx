@@ -82,6 +82,7 @@ const Products = () => {
 
     return (
         <div >
+            <h1 className="other-text">My products</h1>
             <button className="btn" onClick={clickAdd}>Add Product</button>
             <>{isAddButtonPressed ? <AddProductForm addProduct={addProduct} /> : null}</>
             {products.map(

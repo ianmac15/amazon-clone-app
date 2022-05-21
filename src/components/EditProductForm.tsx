@@ -18,7 +18,7 @@ const EditProductForm = ({editProduct, editID}:properties) => {
 
   return (
     <div>
-        <form onSubmit={onEdit}>
+        <form className="product-form" onSubmit={onEdit}>
             <label>Edit Product</label>
             <input type="text" placeholder="Edit name" value={editedProduct.name}
             onChange={(e) => setEditedProduct({...editedProduct, name: e.target.value})}></input>

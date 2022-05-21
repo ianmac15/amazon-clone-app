@@ -5,7 +5,10 @@ import { userType } from "./UserLogin"
 const Title = ({ name, currentUser, signOut }: properties) => {
     return (
         <h1 className='title'>
-            <h3 className="webpage-name">{name}</h3>
+            <div>
+                <h3 className="webpage-name">{name}</h3>
+                <h4 className="after-title">Trade anything with anyone...</h4>
+            </div>
             <form className='form-control'>
                 <input />
             </form>
