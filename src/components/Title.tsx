@@ -1,8 +1,14 @@
+import { useAuth0 } from "@auth0/auth0-react"
 import { Link } from "react-router-dom"
 import { signOutType } from "../App"
+import LoginLogout from "./LoginLogout"
 import { userType } from "./UserLogin"
 
 const Title = ({ name, currentUser, signOut }: properties) => {
+
+    // const {loginWithRedirect, logout, user, isAuthenticated, isLoading} = useAuth0();
+    
+
     return (
         <h1 className='title'>
             <div>
@@ -12,14 +18,7 @@ const Title = ({ name, currentUser, signOut }: properties) => {
             <form className='form-control'>
                 <input />
             </form>
-            {currentUser.id !== 0
-                ? (<div className="user">
-                    <h3 style={{ fontSize: 30 }}>
-                        {currentUser.username}
-                    </h3>
-                    <button className="btn" onClick={() => signOut()}>Sign out</button>
-                </div>)
-                : (<Link className="btn" to={"/signIn"}>Sign In</Link>)}
+            <LoginLogout />
 
         </h1>
     )

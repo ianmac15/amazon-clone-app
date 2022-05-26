@@ -6,6 +6,7 @@ import { signOutType } from "../App"
 const HomePage = ({currentUser, signOut}:properties) => {
 
     
+
     return (
         <div>
             <Title name="Online Market" currentUser={currentUser} signOut={signOut}/>
@@ -15,6 +16,8 @@ const HomePage = ({currentUser, signOut}:properties) => {
         </div>
     )
 }
+
+// signOut={signOut} αυτό πάει μέσα στο Title αντί για το logout
 
 type properties = {
     currentUser: userType
