@@ -8,7 +8,7 @@ const HomePage = ({currentUser, signOut}:properties) => {
     
 
     return (
-        <div>
+        <div className="homepage">
             <Title name="Online Market" currentUser={currentUser} signOut={signOut}/>
             <div className="products">
                 <Products />
