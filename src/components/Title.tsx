@@ -7,20 +7,23 @@ import { userType } from "./UserLogin"
 const Title = ({ name, currentUser, signOut }: properties) => {
 
     // const {loginWithRedirect, logout, user, isAuthenticated, isLoading} = useAuth0();
-    
+
 
     return (
-        <h1 className='title'>
+        <div className='title'>
             <div>
-                <h3 className="webpage-name">{name}</h3>
-                <h4 className="after-title">Trade anything with anyone...</h4>
+                <div className="webpage-name">{name}</div>
+                <div className="after-title">Trade anything with anyone...</div>
             </div>
-            <form className='form-control'>
-                <input />
-            </form>
-            <LoginLogout />
-
-        </h1>
+            <div className='search-bar'>
+                <form>
+                    <input />
+                </form>
+            </div>
+            <div>
+                <LoginLogout />
+            </div>
+        </div>
     )
 }
 

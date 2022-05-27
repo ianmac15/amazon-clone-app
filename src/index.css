@@ -22,21 +22,29 @@
   padding: 0px;
 }
 
+.webpage-name {
+  font-size: 35px;
+  margin: 10px;
+}
+
 .after-title {
-  color: white;
-  font-size: 15px;
-  margin-left: 20px;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.search-bar {
+  margin: 5px;
+  width: 600px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.search-bar input {
+  width:500px
 }
 
 .other-text {
-  color: rgb(19, 26, 34);
   font-size: 30px;
-}
-
-.webpage-name {
-  margin: 10px;
-  color: white;
-  background-color: rgb(19, 26, 34);
 }
 
 .form-control{
