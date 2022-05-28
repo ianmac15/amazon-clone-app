@@ -3,22 +3,22 @@ import React from 'react'
 
 const LoginLogout = () => {
 
-    const {loginWithRedirect, logout, user, isLoading, isAuthenticated } = useAuth0()
+    const { loginWithRedirect, logout, user, isLoading, isAuthenticated } = useAuth0()
 
     if (isLoading) return (<div>Loading...</div>)
 
     return (
-        <div>
+        <div className='LoginLogout'>
             {isAuthenticated
                 ? (<div className="user">
-                    <h3 style={{ fontSize: 30 }}>
+                    <div >
                         {user?.nickname}
-                    </h3>
-                    <button className="btn" onClick={() => logout()}>Log out</button>
+                    </div>
+                    <button className="btn login-btn" onClick={() => logout()}>Log out</button>
                     {/* <button className="btn" onClick={() => signOut()}>Sign out</button> */}
                 </div>)
                 // : (<Link className="btn" to={"/signIn"}>Sign In</Link>)}
-                : (<button className="btn" onClick={() => loginWithRedirect()}>Log In</button>)}
+                : (<button className="btn login-btn" onClick={() => loginWithRedirect()}>Log In</button>)}
         </div>
     )
 }
