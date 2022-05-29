@@ -2,6 +2,7 @@ import { DelProductType, EditProductType, productType } from "./Products"
 import { FaTimes, FaWrench, FaLightbulb } from 'react-icons/fa';
 import { useState } from "react";
 import EditProductForm from './EditProductForm'
+import '../styling/mainPage.css'
 
 const Product = ({ product, clickDel, editProduct }: properties) => {
 

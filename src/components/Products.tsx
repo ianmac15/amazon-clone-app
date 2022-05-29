@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import AddProductForm from "./AddProductForm"
 import Product from "./Product"
+import '../styling/mainPage.css'
 
 const Products = () => {
 
@@ -81,10 +82,7 @@ const Products = () => {
 
 
     return (
-        <div >
-            <h1 className="other-text">My products</h1>
-            <button className="btn" onClick={clickAdd}>Add Product</button>
-            <>{isAddButtonPressed ? <AddProductForm addProduct={addProduct} /> : null}</>
+        <div className="products">
             {products.map(
                 (product) => (<Product key={product.id} product={product} clickDel={deleteProduct} editProduct={editProduct}/>)
             )}

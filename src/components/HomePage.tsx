@@ -2,15 +2,20 @@ import Title from "./Title"
 import Products from "./Products"
 import { userType } from "./UserLogin"
 import { signOutType } from "../App"
+import '../styling/mainPage.css'
 
-const HomePage = ({currentUser, signOut}:properties) => {
+const HomePage = ({ currentUser, signOut }: properties) => {
 
-    
+
 
     return (
-        <div className="homepage">
-            <Title name="Online Market" currentUser={currentUser} signOut={signOut}/>
-            <div className="products">
+        <div >
+            <Title name="Market Town" currentUser={currentUser} signOut={signOut} />
+
+            <div className="main-page">
+                <div className="welcome-message-container">
+                    <div className="welcome-message">Choose from a great variety of products</div>
+                </div>
                 <Products />
             </div>
         </div>
