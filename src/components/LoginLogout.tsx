@@ -10,17 +10,17 @@ const LoginLogout = () => {
     return (
         <div className='LoginLogout'>
             {isAuthenticated
-                ? (<div className="user">
-                    <div >
-                        {user?.nickname}
+                ? <div className='user-button'>
+                    <div className="user">
+                        <div className='user2'>Hello, {user?.nickname}</div>
+                        <div className='profile'>Profile</div>
                     </div>
-                    <button className="btn login-btn" onClick={() => logout()}>Log out</button>
-                    {/* <button className="btn" onClick={() => signOut()}>Sign out</button> */}
-                </div>)
-                // : (<Link className="btn" to={"/signIn"}>Sign In</Link>)}
-                : (<button className="btn login-btn" onClick={() => loginWithRedirect()}>Log In</button>)}
+                    <button className="login-btn" onClick={() => logout()}>Log out</button>
+                </div>
+                : (<button className="login-btn" onClick={() => loginWithRedirect()}>Log In</button>)}
         </div>
     )
 }
 
 export default LoginLogout
+

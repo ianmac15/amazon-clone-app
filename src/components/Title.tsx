@@ -5,6 +5,7 @@ import LoginLogout from "./LoginLogout"
 import SearchBar from "./SearchBar"
 import { userType } from "./UserLogin"
 import { useState } from "react"
+import '../styling/Title.css'
 
 const Title = ({ name, currentUser, signOut }: properties) => {
 
@@ -18,16 +19,15 @@ const Title = ({ name, currentUser, signOut }: properties) => {
 
     return (
         <div className='title'>
-            <div>
+            <div className="header1">
                 <div className="webpage-name">{name}</div>
-                <div className="after-title">Trade anything with anyone...</div>
             </div>
-            <div className='search-bar'>
-                <form  onClick={ onclick} className={`form ${isClicked && "form-clicked"} `}>
+            <div className='header2'>
+                <form  className={"form1"}>
                     <SearchBar />
                 </form>
             </div>
-            <div>
+            <div className="header3">
                 <LoginLogout />
             </div>
         </div>
@@ -41,3 +41,5 @@ interface properties {
 }
 
 export default Title
+
+{/* <form  onClick={ onclick} className={`${isClicked ? "form form-clicked" : "form"} `}> */}

@@ -12,7 +12,7 @@ const onclick = () => {
 
     
   return (
-    <input className={`search-bar-input ${isClicked && "search-bar-input-clicked"} `}  />
+    <input className='input'  />
   )
 }
 
