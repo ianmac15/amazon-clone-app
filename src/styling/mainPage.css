@@ -12,44 +12,73 @@
 .welcome-message-container {
     display: grid;
     place-content: center;
-    
-    
+
+
 }
 
 .welcome-message {
     font-size: 3rem;
     color: rgb(0, 0, 0);
     padding: 7rem;
-    
+
 }
 
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 50rem));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 100rem));
+    /* grid-template-rows: repeat(auto-fit, minmax(10rem, 20rem)); */
+    /* grid-template-columns: 50rem;
+    grid-template-rows: 25rem; */
+
     justify-content: space-evenly;
-    
+
     gap: 1rem;
 }
 
 .product {
     background: rgb(241, 239, 239);
+    background-color: hsla(55, 15%, 66%, 0.836);
+    
 
-    padding: 0.5rem;
 
-    font-size: 1rem;
     display: flex;
     justify-content: space-between;
 
 
 }
 
+
+.image-container {
+    width: 30%;
+    background-color: white;
+    padding: 1rem;
+}
+
+.image {
+    object-fit: contain;
+    width: 15rem;
+    height: 15rem;
+    float: left;
+
+    cursor: pointer;
+
+
+}
+
+.product-text-container {
+    width: 70%;
+    
+}
+
+.product-text {
+    font-size: 3rem;
+}
+
 .cart {
     font-size: 6rem;
 }
 
-.product2 {
-    
-}
+.product2 {}
 
 .other-text {
     font-size: 30px;
@@ -90,19 +119,7 @@
 
 
 
-.image {
-    object-fit: cover;
-    width: 120px;
-    height: 120px;
-    cursor: pointer;
-}
 
-.text {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    cursor: pointer;
-}
 
 .userLogin {
 
@@ -129,12 +146,6 @@
     height: 20px;
     width: 50px;
     margin: 10px;
-}
-
-p {
-    font-size: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
 }
 
 .signin-form input {

@@ -15,11 +15,14 @@ const Product = ({ product, clickDel, editProduct }: properties) => {
 
     return (
         <div className="product">
-            <img src={product.image} className="image"></img>
-            <div className="text">
-                <p>
+            <div className="image-container">
+                <img src={product.image} className="image" />
+            </div>
+            
+            <div className="product-text-container">
+                <div className="product-text">
                     {product.name}
-                </p>
+                </div>
                 {/* <FaWrench className="fawrench" onClick={clickEdit} /> */}
                 {/* <FaTimes className="fatimes" onClick={() => clickDel(product.id)} /> */}
                 
