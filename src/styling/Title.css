@@ -11,17 +11,19 @@
 }
 
 .title {
-    height:11vh;
+    
     color: white;
     background-color: rgb(19, 26, 34);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    
   }
   
   .header1 {
+    padding: 2rem;
     width: 20%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

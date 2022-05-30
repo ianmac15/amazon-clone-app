@@ -1,5 +1,6 @@
 import { DelProductType, EditProductType, productType } from "./Products"
-import { FaTimes, FaWrench, FaLightbulb } from 'react-icons/fa';
+import { FaTimes, FaWrench, FaLightbulb} from 'react-icons/fa';
+
 import { useState } from "react";
 import EditProductForm from './EditProductForm'
 import '../styling/mainPage.css'
@@ -19,8 +20,9 @@ const Product = ({ product, clickDel, editProduct }: properties) => {
                 <p>
                     {product.name}
                 </p>
-                <FaWrench className="fawrench" onClick={clickEdit} />
-                <FaTimes className="fatimes" onClick={() => clickDel(product.id)} />
+                {/* <FaWrench className="fawrench" onClick={clickEdit} /> */}
+                {/* <FaTimes className="fatimes" onClick={() => clickDel(product.id)} /> */}
+                
             </div>
             <>{isEditButtonPressed ? <EditProductForm editProduct={editProduct} editID={product.id}/> : null}</>
 

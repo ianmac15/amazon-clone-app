@@ -93,9 +93,9 @@ const Products = () => {
 
 export type productType = {
     name: string
-    // category: string
-    // price: number
-    // isSold: boolean
+    category: string
+    price: number
+    isSold: boolean
     image: string
     id: number
 }

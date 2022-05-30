@@ -1,5 +1,6 @@
 import { useAuth0 } from '@auth0/auth0-react'
 import React from 'react'
+import { BsCart3 } from 'react-icons/bs'
 
 const LoginLogout = () => {
 
@@ -10,7 +11,15 @@ const LoginLogout = () => {
     return (
         <div className='LoginLogout'>
             {isAuthenticated
-                ? <div className='user-button'>
+                ?
+                <div className='user-button'>
+                    <div className="cart">
+                        <button >
+                            <BsCart3 />
+                        </button>
+
+                    </div>
+
                     <div className="user">
                         <div className='user2'>Hello, {user?.nickname}</div>
                         <div className='profile'>Profile</div>
