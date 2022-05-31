@@ -1,5 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react"
-import { Link } from "react-router-dom"
+import { Link, Navigate, NavLink, useNavigate } from "react-router-dom"
 import { signOutType } from "../App"
 import LoginLogout from "./LoginLogout"
 import SearchBar from "./SearchBar"
@@ -12,15 +12,16 @@ const Title = ({ name, currentUser, signOut }: properties) => {
     // const {loginWithRedirect, logout, user, isAuthenticated, isLoading} = useAuth0();
 
     const [isClicked, setIsClicked] = useState<boolean>(false);
+    const navigate = useNavigate()
 
-    const onclick = () => {
-        setIsClicked(!isClicked)
+    const goToHome = () => {
+        window.location.reload()
     }
 
     return (
         <div className='title'>
             <div className="header1">
-                <div className="webpage-name">{name}</div>
+                <div className="webpage-name" onClick={goToHome}>{name}</div>
             </div>
             <div className='header2'>
                 <form  className={"form1"}>

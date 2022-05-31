@@ -9,6 +9,14 @@
       "id": 1
     },
     {
+      "name": "HP 255 G8 15.6 (Ryzen 3-3250U/8GB/256GB SSD/FHD/W10 Home) (GR Keyboard)",
+      "category": "Laptops-Desktops",
+      "price": 440,
+      "isSold": false,
+      "image": "https://a.scdn.gr/images/sku_main_images/026813/26813649/xlarge_20210127122756_hp_255_g8_ryzen_3_3250u_8gb_256gb_fhd_w10.jpeg",
+      "id": 2
+    },
+    {
       "name": "Dell Vostro 3500 15.6 (i3-1115G4/8GB/256GB SSD/FHD/W10 Home) (GR Keyboard)",
       "category": "Laptops-Desktops",
       "price": 480,
@@ -17,22 +25,15 @@
       "id": 3
     },
     {
-      "name": "Fender Ηλεκτρική Κιθάρα Player με SSS Διάταξη Μαγνητών και Tremolo Ταστιέρα Maple σε Χρώμα Black",
-      "image": "https://d.scdn.gr/images/sku_main_images/015816/15816392/xlarge_20211206161158_fender_player_stratocaster_black.jpeg",
+      "name": "Fender Limited Edition Player Stratocaster Electric Guitar, Maple Fingerboard, Lake Placid Blue",
+      "image": "https://m.media-amazon.com/images/I/51E3cGZ4wSL._AC_SL1200_.jpg",
       "category": "Guitars",
       "price": 750,
       "isSold": false,
       "id": 4
     },
     
-    {
-      "name": "HP 255 G8 15.6 (Ryzen 3-3250U/8GB/256GB SSD/FHD/W10 Home) (GR Keyboard)",
-      "category": "Laptops-Desktops",
-      "price": 440,
-      "isSold": false,
-      "image": "https://a.scdn.gr/images/sku_main_images/026813/26813649/xlarge_20210127122756_hp_255_g8_ryzen_3_3250u_8gb_256gb_fhd_w10.jpeg",
-      "id": 2
-    },
+    
     {
       "name": "Ibanez Ηλεκτρική Κιθάρα JEMJR με HSH Διάταξη Μαγνητών και Tremolo Ταστιέρα Rosewood σε Χρώμα White",
       "category": "Guitars",

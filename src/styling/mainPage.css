@@ -38,7 +38,7 @@
 .product {
     background: rgb(241, 239, 239);
     background-color: hsla(55, 15%, 66%, 0.836);
-    
+
 
 
     display: flex;
@@ -67,59 +67,56 @@
 
 .product-text-container {
     width: 70%;
-    
+    padding: 1rem;
+
 }
 
 .product-text {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .cart {
     font-size: 6rem;
 }
 
-.product2 {}
-
-.other-text {
-    font-size: 30px;
+.addToCartButton {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 230, 0);
+    cursor: pointer;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    max-width: 30%;
+    border: none;
+    border-radius: 0.6rem;
+    margin-bottom: 1rem;
 }
 
-.form-control {
-    margin: 10px;
-
+.addToCartButton:hover {
+    background-color: rgb(235, 210, 0);
 }
 
-.form-control input {
-    width: 200%;
-    height: 40px;
-    margin: 5px;
-    padding: 3px 7px;
-    font-size: 17px;
-    border-radius: 10px;
-    position: relative;
-    right: 130px;
+.addToCartButton:active {
+    background-color: rgb(255, 230, 0);
 }
 
-.btn {
-    color: rgb(255, 255, 255);
+.buyNowButton {
+    color: rgb(0, 0, 0);
     background-color: rgb(255, 153, 0);
     cursor: pointer;
-    padding: 0.3rem;
-    font-size: 0.6rem;
-    width: 50%;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    max-width: 30%;
     border: none;
-    border-radius: 0.2rem;
+    border-radius: 0.6rem;
 }
 
-.btn.register {
-    background-color: rgb(112, 158, 177)
+.buyNowButton:hover {
+    background-color: rgb(230, 133, 0);
 }
 
-
-
-
-
-
+.buyNowButton:active {
+    background-color: rgb(255, 153, 0);
+}
 
 .userLogin {
 
