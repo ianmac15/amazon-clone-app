@@ -17,9 +17,15 @@ const Product = ({ product, clickDel, editProduct }: properties) => {
         <div className="product">
             <div className="image-container">
                 <img src={product.image} className="image" />
-                <div>
-                    <button className="addToCartButton">Add to cart</button>
-                    <button className="buyNowButton">Buy now</button>
+                <div className="buttonsContainer">
+                    <div className='cartButtonContainer'>
+                        <button className="addToCartButton">Add to cart</button>
+                    </div>
+                    <div className="buyButtonContainer">
+                        <button className="addToCartButton buyNowButton">Buy now</button>
+                    </div>
+
+
                 </div>
 
             </div>

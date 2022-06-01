@@ -8,27 +8,54 @@ const LoginLogout = () => {
 
     if (isLoading) return (<div>Loading...</div>)
 
-    return (
-        <div className='LoginLogout'>
-            {isAuthenticated
-                ?
-                <div className='user-button'>
-                    <div className="cart">
-                        <button >
-                            <BsCart3 />
-                        </button>
+    if (isAuthenticated) {
 
-                    </div>
-
-                    <div className="user">
-                        <div className='user2'>Hello, {user?.nickname}</div>
-                        <div className='profile'>Profile</div>
-                    </div>
-                    <button className="login-btn" onClick={() => logout()}>Log out</button>
+        return (
+            <div className='LoginLogout'>
+                <div className="cart">
+                    <button>
+                        <BsCart3/>
+                    </button>
                 </div>
-                : (<button className="login-btn" onClick={() => loginWithRedirect()}>Log In</button>)}
-        </div>
-    )
+                <div className="user">
+                    <div className='user2'>Hello, {user?.nickname}</div>
+                    <div className='profile'>Profile</div>
+                </div>
+                <button className="login-btn" onClick={() => logout()}>Log out</button>
+            </div>
+        )
+    } else {
+        return(
+            <button className="login-btn" onClick={() => loginWithRedirect()}>Log In</button> 
+        )
+    }
+
+    isAuthenticated ? 
+
+    // return (
+
+    //     {
+    //         isAuthenticated
+    //             ?
+    //             (<div className = 'LoginLogout' >
+    //                 <div className='user-button'>
+    //                     <div className="cart">
+    //                         <button >
+    //                             <BsCart3 />
+    //                         </button>
+
+    //                     </div>
+
+    //                     <div className="user">
+    //                         <div className='user2'>Hello, {user?.nickname}</div>
+    //                         <div className='profile'>Profile</div>
+    //                     </div>
+    //                     <button className="login-btn" onClick={() => logout()}>Log out</button>
+    //                 </div>
+    //             </div >)
+    //             : (<button className="login-btn" onClick={() => loginWithRedirect()}>Log In</button>)}
+        
+    // )
 }
 
 export default LoginLogout

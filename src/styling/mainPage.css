@@ -10,8 +10,11 @@
 }
 
 .welcome-message-container {
-    display: grid;
-    place-content: center;
+    /* display: grid;
+    place-content: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
 }
@@ -47,8 +50,27 @@
 
 }
 
+.buttonsContainer {
+    width: 40%;
+}
+
+.cartButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.buyButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
 
 .image-container {
+    display: flex;
     width: 30%;
     background-color: white;
     padding: 1rem;
@@ -85,10 +107,9 @@
     cursor: pointer;
     padding: 0.8rem;
     font-size: 1.5rem;
-    max-width: 30%;
+    max-width: 80%;
     border: none;
     border-radius: 0.6rem;
-    margin-bottom: 1rem;
 }
 
 .addToCartButton:hover {
@@ -100,14 +121,7 @@
 }
 
 .buyNowButton {
-    color: rgb(0, 0, 0);
     background-color: rgb(255, 153, 0);
-    cursor: pointer;
-    padding: 0.8rem;
-    font-size: 1.5rem;
-    max-width: 30%;
-    border: none;
-    border-radius: 0.6rem;
 }
 
 .buyNowButton:hover {
