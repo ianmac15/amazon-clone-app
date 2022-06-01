@@ -12,25 +12,26 @@ const LoginLogout = () => {
 
         return (
             <div className='LoginLogout'>
-                <div className="cart">
-                    <button>
-                        <BsCart3/>
-                    </button>
-                </div>
-                <div className="user">
+
+                <button className='login-btn'>
+                    <BsCart3 className='cart-button'/>
+                </button>
+
+                {/* <div className="user">
                     <div className='user2'>Hello, {user?.nickname}</div>
                     <div className='profile'>Profile</div>
-                </div>
+                </div> */}
+                <button className='login-btn'>My Profile</button>
                 <button className="login-btn" onClick={() => logout()}>Log out</button>
             </div>
         )
     } else {
-        return(
-            <button className="login-btn" onClick={() => loginWithRedirect()}>Log In</button> 
+        return (
+            <button className="login-btn" onClick={() => loginWithRedirect()}>Log In</button>
         )
     }
 
-    isAuthenticated ? 
+
 
     // return (
 
@@ -54,7 +55,7 @@ const LoginLogout = () => {
     //                 </div>
     //             </div >)
     //             : (<button className="login-btn" onClick={() => loginWithRedirect()}>Log In</button>)}
-        
+
     // )
 }
 
