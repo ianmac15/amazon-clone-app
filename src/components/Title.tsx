@@ -24,13 +24,19 @@ const Title = ({ name, currentUser, signOut }: properties) => {
                 <div className="webpage-name" onClick={goToHome}>{name}</div>
             </div>
             <div className='header2'>
-                <form  className={"form1"}>
-                    <SearchBar />
-                </form>
+                <div className="form1-container">
+                    <form className={"form1"}>
+                        <SearchBar />
+                    </form>
+                </div>
+                <div className="buttons-container">
+                    <LoginLogout />
+                </div>
+
             </div>
-            <div className="header3">
-                <LoginLogout />
-            </div>
+            {/* <div className="header3"> */}
+
+            {/* </div> */}
         </div>
     )
 }
@@ -43,4 +49,4 @@ interface properties {
 
 export default Title
 
-{/* <form  onClick={ onclick} className={`${isClicked ? "form form-clicked" : "form"} `}> */}
+{/* <form  onClick={ onclick} className={`${isClicked ? "form form-clicked" : "form"} `}> */ }

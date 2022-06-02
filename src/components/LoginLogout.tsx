@@ -12,11 +12,7 @@ const LoginLogout = () => {
 
         return (
             <div className='LoginLogout'>
-
-                <button className='login-btn'>
-                    <BsCart3 className='cart-button'/>
-                </button>
-
+                <BsCart3 className='login-btn cart-button' />
                 {/* <div className="user">
                     <div className='user2'>Hello, {user?.nickname}</div>
                     <div className='profile'>Profile</div>

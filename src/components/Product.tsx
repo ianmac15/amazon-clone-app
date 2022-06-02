@@ -24,22 +24,16 @@ const Product = ({ product, clickDel, editProduct }: properties) => {
                     <div className="buyButtonContainer">
                         <button className="addToCartButton buyNowButton">Buy now</button>
                     </div>
-
-
                 </div>
-
             </div>
-
             <div className="product-text-container">
                 <div className="product-text">
                     {product.name}
                 </div>
                 {/* <FaWrench className="fawrench" onClick={clickEdit} /> */}
                 {/* <FaTimes className="fatimes" onClick={() => clickDel(product.id)} /> */}
-
             </div>
             <>{isEditButtonPressed ? <EditProductForm editProduct={editProduct} editID={product.id} /> : null}</>
-
         </div>
     )
 }

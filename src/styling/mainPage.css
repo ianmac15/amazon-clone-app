@@ -40,14 +40,9 @@
 
 .product {
     background: rgb(241, 239, 239);
-    background-color: hsla(55, 15%, 66%, 0.836);
-
-
-
+    background-color: hsl(55, 51%, 80%);
     display: flex;
     justify-content: space-between;
-
-
 }
 
 .buttonsContainer {
@@ -68,23 +63,33 @@
     height: 50%;
 }
 
-
-.image-container {
-    display: flex;
-    width: 30%;
-    background-color: white;
-    padding: 1rem;
+@media screen and (max-width: 60rem) {
+    .image-container {
+        display: flex;
+        width: 30%;
+        background-color: white;
+        padding: 1rem;
+    }
 }
+
+@media screen and (max-width: 20rem) {
+    .image-container {
+        display: grid;
+        grid-template-rows: auto;
+        width: 30%;
+        background-color: white;
+        padding: 1rem;
+    }
+}
+
+
 
 .image {
     object-fit: contain;
-    width: 15rem;
-    height: 15rem;
+    width: min(90%,20rem);
+    height: min(90%,20rem);
     float: left;
-
     cursor: pointer;
-
-
 }
 
 .product-text-container {

@@ -12,7 +12,7 @@ const onclick = () => {
 
     
   return (
-    <input className='input'  />
+    <input className='input' placeholder="Search product..." />
   )
 }
 
