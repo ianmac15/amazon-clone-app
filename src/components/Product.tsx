@@ -17,18 +17,15 @@ const Product = ({ product, clickDel, editProduct }: properties) => {
         <div className="product">
             <div className="image-container">
                 <img src={product.image} className="image" />
-                <div className="buttonsContainer">
-                    <div className='cartButtonContainer'>
-                        <button className="addToCartButton">Add to cart</button>
-                    </div>
-                    <div className="buyButtonContainer">
-                        <button className="addToCartButton buyNowButton">Buy now</button>
-                    </div>
-                </div>
+                
             </div>
             <div className="product-text-container">
                 <div className="product-text">
                     {product.name}
+                </div>
+                <div className="buttonsContainer">
+                    <button className="addToCartButton">Add to cart</button>
+                    <button className="addToCartButton buyNowButton">Buy now</button>
                 </div>
                 {/* <FaWrench className="fawrench" onClick={clickEdit} /> */}
                 {/* <FaTimes className="fatimes" onClick={() => clickDel(product.id)} /> */}
