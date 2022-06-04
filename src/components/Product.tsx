@@ -13,6 +13,10 @@ const Product = ({ product, clickDel, editProduct }: properties) => {
         setIsEditButtonPressed(!isEditButtonPressed)
     }
 
+    const clickAddToCart = () => {
+
+    }
+
     return (
         <div className="product">
             <div className="image-container">

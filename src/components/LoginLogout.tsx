@@ -1,10 +1,21 @@
 import { useAuth0 } from '@auth0/auth0-react'
 import React from 'react'
 import { BsCart3 } from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom'
 
 const LoginLogout = () => {
 
     const { loginWithRedirect, logout, user, isLoading, isAuthenticated } = useAuth0()
+
+    const goToPage = useNavigate()
+
+    const clickMyProfile = () => {
+        goToPage('/profile')
+    }
+
+    const clickShoppingCart = () => {
+        goToPage('/shopping-cart')
+    }
 
     if (isLoading) return (<div>Loading...</div>)
 
@@ -12,12 +23,12 @@ const LoginLogout = () => {
 
         return (
             <div className='LoginLogout'>
-                <BsCart3 className='login-btn cart-button' />
+                <BsCart3 className='login-btn cart-button' onClick={clickShoppingCart}/>
                 {/* <div className="user">
                     <div className='user2'>Hello, {user?.nickname}</div>
                     <div className='profile'>Profile</div>
                 </div> */}
-                <button className='login-btn'>My Profile</button>
+                <button className='login-btn' onClick={clickMyProfile}>My Profile</button>
                 <button className="login-btn" onClick={() => logout()}>Log out</button>
             </div>
         )

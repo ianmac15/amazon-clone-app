@@ -3,24 +3,24 @@
     {
       "name": "Lenovo IdeaPad 3 15ALC6 15.6 (Ryzen 3-5300U/8GB/256GB SSD/FHD/W10 S) Arctic Grey (GR Keyboard)",
       "category": "Laptops-Desktops",
-      "price": 460,
-      "isSold": false,
+      "price": 462.99,
+      "quantity": 10,
       "image": "https://a.scdn.gr/images/sku_main_images/032148/32148163/xlarge_20220124142653_lenovo_ideapad_3_15alc6_ryzen_3_5300u_8gb_256gb_fhd_w10_s_arctic_grey.jpeg",
       "id": 1
     },
     {
       "name": "HP 255 G8 15.6 (Ryzen 3-3250U/8GB/256GB SSD/FHD/W10 Home) (GR Keyboard)",
       "category": "Laptops-Desktops",
-      "price": 440,
-      "isSold": false,
+      "price": 441.99,
+      "quantity": 10,
       "image": "https://a.scdn.gr/images/sku_main_images/026813/26813649/xlarge_20210127122756_hp_255_g8_ryzen_3_3250u_8gb_256gb_fhd_w10.jpeg",
       "id": 2
     },
     {
       "name": "Dell Vostro 3500 15.6 (i3-1115G4/8GB/256GB SSD/FHD/W10 Home) (GR Keyboard)",
       "category": "Laptops-Desktops",
-      "price": 480,
-      "isSold": false,
+      "price": 482.99,
+      "quantity": 10,
       "image": "https://a.scdn.gr/images/sku_main_images/027856/27856120/xlarge_20210324113544_dell_vostro_3500_i3_1115g4_8gb_256gb_fhd_w10_home.jpeg",
       "id": 3
     },
@@ -28,8 +28,8 @@
       "name": "Fender Limited Edition Player Stratocaster Electric Guitar, Maple Fingerboard, Lake Placid Blue",
       "image": "https://m.media-amazon.com/images/I/51E3cGZ4wSL._AC_SL1200_.jpg",
       "category": "Guitars",
-      "price": 750,
-      "isSold": false,
+      "price": 753.99,
+      "quantity": 10,
       "id": 4
     },
     
@@ -37,16 +37,16 @@
     {
       "name": "Ibanez Ηλεκτρική Κιθάρα JEMJR με HSH Διάταξη Μαγνητών και Tremolo Ταστιέρα Rosewood σε Χρώμα White",
       "category": "Guitars",
-      "price": 460,
-      "isSold": false,
+      "price": 468.99,
+      "quantity": 10,
       "image": "https://d.scdn.gr/images/sku_main_images/010001/10001182/20211206161154_ibanez_jemjr_white.jpeg",
       "id": 5
     },
     {
       "name": "Epiphone Ηλεκτρική Κιθάρα Standard 50s με HH Διάταξη Μαγνητών Ταστιέρα Indian Laurel σε Χρώμα Heritage Cherry Sunburst",
       "category": "Guitars",
-      "price": 570,
-      "isSold": false,
+      "price": 576.99,
+      "quantity": 10,
       "image": "https://b.scdn.gr/images/sku_main_images/023745/23745665/xlarge_20200623160130_epiphone_les_paul_standard_50s_heritage_cherry_sunburst.jpeg",
       "id": 6
     },
@@ -54,24 +54,24 @@
       "name": "Samsung Galaxy A52s 5G Dual SIM (6GB/128GB) Awesome Black",
       "image": "https://d.scdn.gr/images/sku_main_images/030662/30662995/xlarge_20210830101603_samsung_galaxy_a52s_128gb_awesome_black.jpeg",
       "category": "Mobile Phones",
-      "price": 260,
-      "isSold": false,
+      "price": 258.99,
+      "quantity": 10,
       "id": 7
     },
     {
       "name": "Xiaomi Poco F3 5G Dual SIM (6GB/128GB) Night Black",
       "image": "https://a.scdn.gr/images/sku_main_images/028198/28198217/xlarge_20210409123512_xiaomi_poco_f3_128gb_night_black.jpeg",
       "category": "Mobile Phones",
-      "price": 250,
-      "isSold": false,
+      "price": 253.99,
+      "quantity": 10,
       "id": 8
     },
     {
       "name": "Apple iPhone 11 (4GB/64GB) Black",
       "image": "https://c.scdn.gr/images/sku_main_images/020060/20060269/xlarge_20190916100719_apple_iphone_11_64gb.jpeg",
       "category": "Mobile Phones",
-      "price": 520,
-      "isSold": false,
+      "price": 522.99,
+      "quantity": 10,
       "id": 9
     }
   ],

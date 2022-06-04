@@ -6,6 +6,8 @@ import { newUserType } from "./components/UserLogin"
 import Register from "./components/Register"
 import { useEffect } from "react"
 import { Auth0Provider, useAuth0 } from "@auth0/auth0-react"
+import MyProfile from "./components/MyProfile"
+import ShoppingCart from "./components/ShoppingCart"
 
 
 
@@ -106,6 +108,8 @@ const App = () => {
                 <Route path="/" element={<HomePage currentUser={currentUser}  signOut={signOut}/>} />
                 <Route path="/signIn" element={<UserLogin users={users} passUser={setCurrentUser} />} />
                 <Route path="/register" element={<Register onAdd={addUser} />} />
+                <Route path="/profile" element={<MyProfile />} />
+                <Route path="/shopping-cart" element={<ShoppingCart />} />
             </Routes>
         </Router>
     )

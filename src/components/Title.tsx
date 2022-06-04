@@ -12,7 +12,6 @@ const Title = ({ name, currentUser, signOut }: properties) => {
     // const {loginWithRedirect, logout, user, isAuthenticated, isLoading} = useAuth0();
 
     const [isClicked, setIsClicked] = useState<boolean>(false);
-    const navigate = useNavigate()
 
     const goToHome = () => {
         window.location.reload()
