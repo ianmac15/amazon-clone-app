@@ -20,20 +20,20 @@ const Products = () => {
     }, [])
 
     const getProducts = async () => {
-        const res = await fetch("http://localhost:7000/products")
+        const res = await fetch("http://localhost:7000/api/products")
         const data = await res.json()
         return data
     }
 
     const getProductByID = async (id: number) => {
-        const res = await fetch(`http://localhost:7000/products/${id}`)
+        const res = await fetch(`http://localhost:7000/api/products/${id}`)
         const data = await res.json()
         return data
     }
 
     const addProduct = async (newProduct: newProductType) => {
 
-        const res = await fetch("http://localhost:7000/products", {
+        const res = await fetch("http://localhost:7000/api/products", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(newProduct)
@@ -52,7 +52,7 @@ const Products = () => {
     
 
     const deleteProduct = async (id: number) => {
-        await fetch(`http://localhost:7000/products/${id}`, {
+        await fetch(`http://localhost:7000/api/products/${id}`, {
             method: "DELETE"
         })
 
@@ -65,7 +65,7 @@ const Products = () => {
 
     const editProduct = async (id:number, editedProduct: newProductType) => {
         // const productToEdit = editedProduct
-        const res = await fetch(`http://localhost:7000/products/${id}`,{
+        const res = await fetch(`http://localhost:7000/api/products/${id}`,{
             method: "PUT",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(editedProduct)

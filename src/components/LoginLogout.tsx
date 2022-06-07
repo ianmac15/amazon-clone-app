@@ -2,6 +2,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import React from 'react'
 import { BsCart3 } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
+import { setHasLoggedInType, signOutType } from '../App'
 
 const LoginLogout = () => {
 
@@ -17,6 +18,16 @@ const LoginLogout = () => {
         goToPage('/shopping-cart')
     }
 
+    const loginUser = () => {
+        loginWithRedirect()
+        // passAuth(isAuthenticated)
+    }
+
+    const logoutUser = () => {
+        logout()
+        // passAuth(isAuthenticated)
+    }
+
     if (isLoading) return (<div>Loading...</div>)
 
     if (isAuthenticated) {
@@ -29,12 +40,12 @@ const LoginLogout = () => {
                     <div className='profile'>Profile</div>
                 </div> */}
                 <button className='login-btn' onClick={clickMyProfile}>My Profile</button>
-                <button className="login-btn" onClick={() => logout()}>Log out</button>
+                <button className="login-btn" onClick={logoutUser}>Log out</button>
             </div>
         )
     } else {
         return (
-            <button className="login-btn" onClick={() => loginWithRedirect()}>Log In</button>
+            <button className="login-btn" onClick={loginUser}>Log In</button>
         )
     }
 
@@ -64,6 +75,10 @@ const LoginLogout = () => {
     //             : (<button className="login-btn" onClick={() => loginWithRedirect()}>Log In</button>)}
 
     // )
+}
+
+interface properties {
+    passAuth: setHasLoggedInType
 }
 
 export default LoginLogout

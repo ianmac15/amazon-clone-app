@@ -8,6 +8,8 @@ import { useEffect } from "react"
 import { Auth0Provider, useAuth0 } from "@auth0/auth0-react"
 import MyProfile from "./components/MyProfile"
 import ShoppingCart from "./components/ShoppingCart"
+import Products from "./components/Products"
+import AdminPage from "./components/AdminPage"
 
 
 
@@ -18,18 +20,18 @@ const App = () => {
     const [users, setUsers] = useState<userType[]>([])
     const [currentUser, setCurrentUser] = useState<userType>({ email: '', username: '', password: '', id: 0 })
 
-    useEffect(
-        () => {
+    // useEffect(
+    //     () => {
 
-            const getUsersFromServer = async () => {
-                const usersFromServer = await getUsers()
-                setUsers(usersFromServer)
-            }
+    //         const getUsersFromServer = async () => {
+    //             const usersFromServer = await getUsers()
+    //             setUsers(usersFromServer)
+    //         }
 
 
-            getUsersFromServer()
-        }, []
-    )
+    //         getUsersFromServer()
+    //     }, []
+    // )
 
     const getUsers = async () => {
         const res = await fetch("http://localhost:7000/users")
@@ -110,6 +112,7 @@ const App = () => {
                 <Route path="/register" element={<Register onAdd={addUser} />} />
                 <Route path="/profile" element={<MyProfile />} />
                 <Route path="/shopping-cart" element={<ShoppingCart />} />
+                <Route path="/admin" element={<AdminPage />}/>
             </Routes>
         </Router>
     )
