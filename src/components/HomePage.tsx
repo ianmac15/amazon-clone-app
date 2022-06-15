@@ -3,10 +3,11 @@ import Products from "./Products"
 import { userType } from "./UserLogin"
 import { signOutType } from "../App"
 import '../styling/mainPage.css'
+import { useState } from "react"
 
 const HomePage = ({ currentUser, signOut }: properties) => {
 
-
+    const [isAdmin, setIsAdmin] = useState<boolean>(false);
 
     return (
         <div >
@@ -16,7 +17,7 @@ const HomePage = ({ currentUser, signOut }: properties) => {
                 <div className="welcome-message-container">
                     <div className="welcome-message">Choose from a great variety of products</div>
                 </div>
-                <Products />
+                <Products isAddPressed = {false} isAdmin={isAdmin}/>
             </div>
         </div>
     )

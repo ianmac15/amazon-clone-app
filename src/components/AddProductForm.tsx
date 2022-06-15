@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { AddProductType, newProductType } from './Products'
+import "../styling/adminpage.css"
 
 const AddProductForm = ({addProduct}:properties) => {
 

@@ -3,11 +3,11 @@ import AddProductForm from "./AddProductForm"
 import Product from "./Product"
 import '../styling/mainPage.css'
 
-const Products = () => {
+const Products = ({ isAdmin, isAddPressed }: properties) => {
 
     const [products, setProducts] = useState<productType[]>([])
-    const [isAddButtonPressed, setIsAddButtonPressed] = useState<boolean>(false)
-    
+    // const [isAddButtonPressed, setIsAddButtonPressed] = useState<boolean>(false)
+
 
     useEffect(() => {
         const getProductsFromSErver = async () => {
@@ -45,11 +45,6 @@ const Products = () => {
         setProducts([...products, data])
     }
 
-    const clickAdd = () => {
-        setIsAddButtonPressed(!isAddButtonPressed)
-    }
-
-    
 
     const deleteProduct = async (id: number) => {
         await fetch(`http://localhost:7000/api/products/${id}`, {
@@ -58,37 +53,47 @@ const Products = () => {
 
         setProducts(products.filter(
             (prod) => {
-                return prod.id !== id 
+                return prod.id !== id
             }
         ))
     }
 
-    const editProduct = async (id:number, editedProduct: newProductType) => {
+    const editProduct = async (id: number, editedProduct: newProductType) => {
         // const productToEdit = editedProduct
-        const res = await fetch(`http://localhost:7000/api/products/${id}`,{
+        const res = await fetch(`http://localhost:7000/api/products/${id}`, {
             method: "PUT",
-            headers: {"content-type": "application/json"},
+            headers: { "content-type": "application/json" },
             body: JSON.stringify(editedProduct)
         })
 
         const data: productType = await res.json()
 
-        setProducts(products.map((par) => 
-            (par.id === id ? {...par, name:data.name, image:data.image} : par)
-    
+        setProducts(products.map((par) =>
+            (par.id === id ? { ...par, name: data.name, image: data.image } : par)
+
 
         ))
     }
 
 
     return (
-        <div className="products">
-            {products.map(
-                (product) => (<Product key={product.id} product={product} clickDel={deleteProduct} editProduct={editProduct}/>)
-            )}
+        <div>
+            {isAddPressed ? <AddProductForm addProduct={addProduct}/> : null}
             
+            <div className="products">
+                {products.map(
+                    (product) => (<Product isAdmin={isAdmin} key={product.id} product={product} clickDel={deleteProduct} editProduct={editProduct} />)
+                )}
+
+            </div>
         </div>
+
     )
+}
+
+interface properties {
+    isAdmin: boolean
+    isAddPressed: boolean
 }
 
 export type productType = {
@@ -117,7 +122,7 @@ export type DelProductType = {
 }
 
 export type EditProductType = {
-    (editID: number ,editedProduct: newProductType): void
+    (editID: number, editedProduct: newProductType): void
 }
 
 export default Products

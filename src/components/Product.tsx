@@ -5,7 +5,7 @@ import { useState } from "react";
 import EditProductForm from './EditProductForm'
 import '../styling/mainPage.css'
 
-const Product = ({ product, clickDel, editProduct }: properties) => {
+const Product = ({ product, clickDel, editProduct, isAdmin }: properties) => {
 
     const [isEditButtonPressed, setIsEditButtonPressed] = useState<boolean>(false)
 
@@ -21,18 +21,26 @@ const Product = ({ product, clickDel, editProduct }: properties) => {
         <div className="product">
             <div className="image-container">
                 <img src={product.image} className="image" />
-                
+
             </div>
             <div className="product-text-container">
                 <div className="product-text">
                     {product.name}
                 </div>
-                <div className="buttonsContainer">
-                    <button className="addToCartButton">Add to cart</button>
-                    <button className="addToCartButton buyNowButton">Buy now</button>
-                </div>
-                {/* <FaWrench className="fawrench" onClick={clickEdit} /> */}
-                {/* <FaTimes className="fatimes" onClick={() => clickDel(product.id)} /> */}
+                <>{isAdmin ? (
+                    <div className="adminButtons">
+                        <FaWrench className="fawrench" onClick={clickEdit} />
+                        <FaTimes className="fatimes" onClick={() => clickDel(product.id)} />
+                    </div>)
+                    :
+                    (<div className="buttonsContainer">
+                        <button className="addToCartButton">Add to cart</button>
+                        <button className="addToCartButton buyNowButton">Buy now</button>
+                    </div>)
+                }</>
+
+
+
             </div>
             <>{isEditButtonPressed ? <EditProductForm editProduct={editProduct} editID={product.id} /> : null}</>
         </div>
@@ -43,6 +51,7 @@ interface properties {
     product: productType
     clickDel: DelProductType
     editProduct: EditProductType
+    isAdmin: boolean
 }
 
 export default Product

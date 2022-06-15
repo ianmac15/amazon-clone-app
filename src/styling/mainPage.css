@@ -138,8 +138,27 @@
     background-color: rgb(255, 153, 0);
 }
 
+.adminButtons {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
 
+.fawrench {
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    color: blue;
+    cursor: pointer;
+}
 
+.fatimes {
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    color: red;
+    cursor: pointer;
+}
 
 
 
@@ -152,12 +171,7 @@
     padding: 10px;
 }
 
-.signin-form {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
 
-}
 
 .product-form {
     display: flex;
@@ -185,15 +199,10 @@
     cursor: pointer;
 }
 
-.fawrench {
-    color: blue;
-}
 
-.fatimes {
-    color: red;
-}
 
 .small-titles {
+    
     font-size: 25px;
     font-weight: bold;
 }

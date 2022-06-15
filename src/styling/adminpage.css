@@ -4,11 +4,31 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+    background-color: rgb(243, 234, 217);
 }
 
 .title2 {
     font-size: 2rem;
     font-weight: 800;
     margin: 1rem;
+}
+
+.add-button {
+    font-size: 2rem;
+    margin: 1rem;
+
+}
+
+.aaa {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 80%;
+}
+
+.signin-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 
 }
