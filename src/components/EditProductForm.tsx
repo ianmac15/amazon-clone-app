@@ -17,16 +17,15 @@ const EditProductForm = ({editProduct, editID}:properties) => {
   }
 
   return (
-    <div>
-        <form className="product-form" onSubmit={onEdit}>
-            <label>Edit Product</label>
-            <input type="text" placeholder="Edit name" value={editedProduct.name}
+        <form className="signin-form" onSubmit={onEdit}>
+            <label className="new-product">Edit Product</label>
+            <input className="b2" type="text" placeholder="Edit name" value={editedProduct.name}
             onChange={(e) => setEditedProduct({...editedProduct, name: e.target.value})}></input>
-            <input type="text" placeholder="Edit image" value={editedProduct.image}
+            <input className="b2" type="text" placeholder="Edit image" value={editedProduct.image}
             onChange={(e) => setEditedProduct({...editedProduct, image: e.target.value})}></input>
             <button className="btn" type="submit">Save changes</button>
         </form>
-    </div>
+  
   )
 }
 

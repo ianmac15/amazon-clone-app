@@ -77,14 +77,12 @@ const Products = ({ isAdmin, isAddPressed }: properties) => {
 
 
     return (
-        <div>
+        <div className="bbb">
             {isAddPressed ? <AddProductForm addProduct={addProduct}/> : null}
-            
             <div className="products">
                 {products.map(
                     (product) => (<Product isAdmin={isAdmin} key={product.id} product={product} clickDel={deleteProduct} editProduct={editProduct} />)
                 )}
-
             </div>
         </div>
 

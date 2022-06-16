@@ -31,10 +31,10 @@ const AddProductForm = ({addProduct}:properties) => {
 
     return (
         <form className='signin-form' onSubmit={onAdd} >
-            <label className='small-titles'>New Product</label>
-            <input value={newProduct.name} type="text" placeholder='Name'
+            <label className='new-product'>New Product</label>
+            <input className='b2' value={newProduct.name} type="text" placeholder='Name'
                 onChange={(e) => setNewProduct({ ...newProduct, name: e.target.value })}></input>
-            <input value={newProduct.image} type="text" placeholder='Image'
+            <input className='b2' value={newProduct.image} type="text" placeholder='Image'
                 onChange={(e) => setNewProduct({ ...newProduct, image: e.target.value })}></input>
             <button className='btn' type='submit'>Add</button>
         </form>

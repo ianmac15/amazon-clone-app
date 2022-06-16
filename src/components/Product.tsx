@@ -20,8 +20,7 @@ const Product = ({ product, clickDel, editProduct, isAdmin }: properties) => {
     return (
         <div className="product">
             <div className="image-container">
-                <img src={product.image} className="image" />
-
+                <img src={product.image} className="image"/>
             </div>
             <div className="product-text-container">
                 <div className="product-text">
@@ -38,11 +37,9 @@ const Product = ({ product, clickDel, editProduct, isAdmin }: properties) => {
                         <button className="addToCartButton buyNowButton">Buy now</button>
                     </div>)
                 }</>
-
-
-
+                <>{isEditButtonPressed ? <EditProductForm editProduct={editProduct} editID={product.id} /> : null}</>
             </div>
-            <>{isEditButtonPressed ? <EditProductForm editProduct={editProduct} editID={product.id} /> : null}</>
+            
         </div>
     )
 }

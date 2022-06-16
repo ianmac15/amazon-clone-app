@@ -16,7 +16,16 @@
 .add-button {
     font-size: 2rem;
     margin: 1rem;
-
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 230, 0);
+    cursor: pointer;
+    padding: 0.8rem;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 20%;
+    max-width: 80rem;
+    border: none;
+    border-radius: 0.6rem;
 }
 
 .aaa {
@@ -28,7 +37,50 @@
 
 .signin-form {
     display: flex;
-    justify-content: center;
-    margin: 20px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 1rem;
+}
 
+.new-product {
+    font-size: 2rem;
+    font-weight: 800;
+    width: 20%;
+}
+
+.b2 {
+    width: 20%;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 0.7rem;
+}
+
+.btn {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 230, 0);
+    cursor: pointer;
+    padding: 0.8rem;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 20%;
+    max-width: 10rem;
+    border: none;
+    border-radius: 0.6rem;
+}
+
+.btn:hover {
+    background-color: rgb(235, 210, 0);
+}
+
+.btn:active {
+    background-color: rgb(255, 230, 0);
+}
+
+.add-button:hover {
+    background-color: rgb(235, 210, 0);
+}
+
+.add-button:active {
+    background-color: rgb(255, 230, 0);
 }

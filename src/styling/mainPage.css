@@ -112,8 +112,8 @@
 
 .image {
     object-fit: contain;
-    width: min(90%, 20rem);
-    height: min(90%, 20rem);
+    width: min(60%, 20rem);
+    height: min(60%, 20rem);
     float: left;
     cursor: pointer;
 }
@@ -160,49 +160,9 @@
     cursor: pointer;
 }
 
-
-
-
-
-.userLogin {
-
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-
-
-.product-form {
+.bbb {
     display: flex;
-    justify-content: center;
-}
-
-.product-form input {
-    border: 1px solid grey;
-    border-radius: 10px;
-    height: 20px;
-    width: 50px;
-    margin: 10px;
-}
-
-.signin-form input {
-    height: 40px;
-    width: 290px;
-    margin: 20px;
-    border: 1px solid grey;
-    border-radius: 10px;
-}
-
-.submit {
-    background-color: rgba(255, 153, 0);
-    cursor: pointer;
-}
-
-
-
-.small-titles {
-    
-    font-size: 25px;
-    font-weight: bold;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
