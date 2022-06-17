@@ -11,9 +11,7 @@ const clientID = process.env.REACT_APP_AUTH0_CLIENT_ID
 
 
 ReactDOM.render(
-  <Auth0Provider domain={'dev-xdma-v87.us.auth0.com'} clientId={'ErIBC6u7y7aH8v5GYlG9l6AV7GMEQISY'} redirectUri={window.location.origin}>
-    <App />
-  </Auth0Provider>,
+    <App />,
   document.getElementById('root')
 );
 
