@@ -10,6 +10,9 @@ import MyProfile from "./components/MyProfile"
 import ShoppingCart from "./components/ShoppingCart"
 import Products from "./components/Products"
 import AdminPage from "./components/AdminPage"
+import AuthProviderWithCallback from "./components/AuthProviderWithCallback"
+import useNav from "./hooks/useNav"
+import ProtectedRoute from "./components/ProtectedRoute"
 
 
 
@@ -102,19 +105,21 @@ const App = () => {
         setCurrentUser({ email: '', username: '', password: '', id: 0 })
     }
 
-   
+//    const [goHome, setGoHome] = useNav()
 
     return (
         <Router>
             <Auth0Provider domain={'dev-xdma-v87.us.auth0.com'} clientId={'ErIBC6u7y7aH8v5GYlG9l6AV7GMEQISY'}
-                redirectUri={window.location.origin} audience={'https://example-api'} onRedirectCallback={goHomePage}>
+                redirectUri={window.location.origin} audience={'https://example-api'} onRedirectCallback={useNav}>
                 <Routes>
                     <Route path="/" element={<HomePage currentUser={currentUser} signOut={signOut} />} />
                     <Route path="/signIn" element={<UserLogin users={users} passUser={setCurrentUser} />} />
                     <Route path="/register" element={<Register onAdd={addUser} />} />
                     <Route path="/profile" element={<MyProfile />} />
                     <Route path="/shopping-cart" element={<ShoppingCart />} />
-                    <Route path="/admin" element={withAuthenticationRequired(AdminPage)} />
+                    <Route path="/admin" element={<ProtectedRoute />} />
+                    {/* <Route path='/admin' element={<AdminPage/>} /> 
+                     <AuthProviderWithCallback component={AdminPage}/> */}
                 </Routes>
             </Auth0Provider>
         </Router>
