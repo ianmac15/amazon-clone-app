@@ -95,12 +95,12 @@ interface properties {
 }
 
 export type productType = {
+    id: number
     name: string
     category: string
     price: number
-    isSold: boolean
+    inStock: boolean
     image: string
-    id: number
 }
 
 export type newProductType = {
